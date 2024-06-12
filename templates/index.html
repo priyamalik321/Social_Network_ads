@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Rating Prediction</title>
+</head>
+<body>
+    <h1>Enter User Details for Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="User_ID">User_ID:</label><br>
+        <input type="text" id="User_ID" name="User_ID" required><br>
+
+        <label for="Age">Age:</label><br>
+        <input type="text" id="Age" name="Age" required><br>
+
+        <label for="EstimatedSalary">Estimated Salary:</label><br>
+        <input type="text" id="EstimatedSalary" name="EstimatedSalary" required><br>
+
+        <label for="Gender">Gender:</label><br>
+        <input type="text" id="Gender" name="Gender" required><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+</body>
+</html>
